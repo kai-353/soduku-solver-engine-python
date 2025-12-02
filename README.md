@@ -14,6 +14,27 @@ A Python implementation of a Sudoku solver using a backtracking algorithm. This 
 - `schecker.py` - Checks if a board has a solution without modifying it
 - `example.py` - Example usage of the solver
 
+## Installation
+
+### Install Locally
+
+To install this package locally for development or personal use:
+
+```bash
+# Clone the repository
+git clone https://github.com/kai-353/sudoku-solver-engine-python.git
+cd sudoku-solver-engine-python
+
+# Install with pip/pip3
+pip install -e .
+```
+
+After installation, you can import and use the package from anywhere:
+
+```python
+from sudoku_engine import Board, Solver, Ops
+```
+
 ## Usage
 
 ### Basic Example

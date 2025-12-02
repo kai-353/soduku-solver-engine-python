@@ -1,20 +1,23 @@
-from board import Board
+try:
+    from .board import Board
+except ImportError:
+    from board import Board
 
 
 class Validator:
     """Validates Sudoku board moves."""
-    
+
     @staticmethod
     def is_valid(board: Board, row: int, col: int, num: int) -> bool:
         """
         Check if placing a number at the specified position is valid.
-        
+
         Args:
             board: The Sudoku board
             row: Row index (0-8)
             col: Column index (0-8)
             num: Number to place (1-9)
-            
+
         Returns:
             True if the placement is valid, False otherwise
         """
@@ -22,7 +25,7 @@ class Validator:
         for i in range(9):
             if board.get_value(row, i) == num or board.get_value(i, col) == num:
                 return False
-        
+
         # Check 3x3 box
         start_row = (row // 3) * 3
         start_col = (col // 3) * 3
@@ -30,5 +33,5 @@ class Validator:
             for c in range(start_col, start_col + 3):
                 if board.get_value(r, c) == num:
                     return False
-        
+
         return True
