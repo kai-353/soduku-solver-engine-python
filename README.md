@@ -19,9 +19,7 @@ A Python implementation of a Sudoku solver using a backtracking algorithm. This 
 ### Basic Example
 
 ```python
-from board import Board
-from solver import Solver
-from ops import Ops
+from sudoku_engine import Board, Solver, Ops
 
 # Create a new board
 board = Board()
@@ -56,8 +54,7 @@ else:
 ### Running the Example
 
 ```bash
-cd python/sudoku_engine
-python example.py
+python -m sudoku_engine.example
 ```
 
 ## Features
